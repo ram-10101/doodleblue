@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body {
+    background: linear-gradient(135deg, #0d1b2a, #1b263b, #001427, #1a0933);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 30px 15px;
+    color: #ffffff;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+.form-container {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    padding: 35px 30px;
+    width: 100%;
+    max-width: 520px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+
+.form-title {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 600;
+    color: #00f2fe;
+    margin-bottom: 25px;
+    text-shadow: 0 0 10px rgba(0, 242, 254, 0.5);
+}
+
+
+.input-group {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #e0e0e0;
+    margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px 16px;
+    background: rgba(0, 77, 86, 0.35);
+    border: 1px solid rgba(0, 242, 254, 0.25);
+    border-radius: 12px;
+    color: #ffffff;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* ఇన్పుట్ ఫోకస్ అయినప్పుడు నియాన్ గ్లో ఎఫెక్ట్ */
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #00f2fe;
+    background: rgba(0, 77, 86, 0.55);
+    box-shadow: 0 0 15px rgba(0, 242, 254, 0.5), inset 0 0 10px rgba(138, 43, 226, 0.3);
+}
+
+/* కాలెండర్ ఐకాన్ రంగు తెలుపు చేయడం */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    cursor: pointer;
+}
+
+/* డ్రాప్‌డౌన్ ఆప్షన్ల బ్యాక్‌గ్రౌండ్ */
+select option {
+    background-color: #0f172a;
+    color: #ffffff;
+}
+
+/* టెక్స్ట్ ఏరియా */
+textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+/* ఫీల్డ్‌సెట్ (Fieldsets) */
+fieldset {
+    border: 1px solid rgba(0, 242, 254, 0.2);
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 18px;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+legend {
+    color: #00f2fe;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 0 8px;
+}
+
+
+.checkbox-group, .radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 5px;
+}
+
+.checkbox-group label, .radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    accent-color: #00f2fe;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+
+input[type="file"]::file-selector-button {
+    background: rgba(0, 242, 254, 0.15);
+    border: 1px solid #00fef2;
+    color: #ffffff;
+    padding: 6px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-right: 10px;
+}
+
+input[type="file"]::file-selector-button:hover {
+    background: #00f2fe;
+    color: #000;
+}
+
+
+.button-container {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.btn-submit {
+    flex: 1;
+    padding: 13px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #7928ca, #b800ff);
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(184, 0, 255, 0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(184, 0, 255, 0.6);
+}
+
+.btn-clear {
+    flex: 1;
+    padding: 13px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.08);
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-clear:hover {
+    background: rgba(255, 255, 255, 0.2);
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration - CampusEvents</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="register-container">
+        <!-- CampusEvents Header -->
+        <div class="form-header">
+            <h2>📅 CampusEvents</h2>
+            <span>Event Registration</span>
+        </div>
+
+        <form>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Full Name*</label>
+                    <input type="text" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label>Email*</label>
+                    <input type="email" placeholder="Enter your email" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Phone Number*</label>
+                    <input type="tel" placeholder="Enter phone number" required>
+                </div>
+                <div class="form-group">
+                    <label>Department*</label>
+                    <select required>
+                        <option value="" disabled selected>Select Department</option>
+                        <option value="aiml">AIML</option>
+                        <option value="cse">CSE</option>
+                        <option value="ece">ECE</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Choose an Event*</label>
+                    <select required>
+                        <option value="" disabled selected>Select Event</option>
+                        <option value="techfest">Tech Fest 2026</option>
+                        <option value="cultural">Cultural Day</option>
+                        <option value="sports">Inter-College Sports Meet</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Registration Type*</label>
+                    <select required>
+                        <option value="" disabled selected>Select Type</option>
+                        <option value="individual">Individual</option>
+                        <option value="team">Team</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group full-width">
+                <label>Message (Optional)</label>
+                <textarea placeholder="Any additional information..."></textarea>
+            </div>
+
+            <div class="terms-text">
+                <input type="checkbox" id="terms" required>
+                <label for="terms" style="display:inline; font-weight:normal;">I agree to the <a href="#">Terms and Conditions</a></label>
+            </div>
+
+            <button type="submit" class="btn-register">Register</button>
+
+            <div class="login-redirect">
+                Already have an account? <a href="#">Log In</a>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

@@ -1,106 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <meta name="description"
-        content="ABC College Website">
-    <title>ABC College</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Campus Events</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header><h1>ABC College</h1></header>
-    <main><p>Welcome!</p></main>
-    <footer>Copyright 2026</footer>
-    <a href="https://developer.mozilla.org/">Learn HTML</a>
-    <a href="about.html">About Us</a>
-    <a href="#contact">Contact section</a>
-    <a href="mailto:admission@example.com">Email</a>
-    <a href="tel:+9876543210">Call</a>
-    <a href="https://example.com"target="blank"rel="noopener">Open external site</a>
-    <img src="sachin.jpg"alt="main building of ABC College"width="600" height="400">
-     <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-            </ul>
-            <ol start ="1">
-                <li>Apply online</li>
-                <li>Submit documents</li>
-                <li>Attend interview</li>
-            </ol>
-            <table border="1">
-                <tr>
-                    <th>CSE(AMIL)</th>
-                    <th>4 Years</th>
-                    <th>Amount</th>
-                </tr>
-                <tr>
-                    <td>B.Tech</td>
-                    <td>4 years</td>
-                    <td>$10,000</td>
-                </tr>
-                <tr>
-                    <td>M.Tech</td>
-                    <td>2 years</td>
-                    <td>$15,000</td>
-                </tr>
-                 <tr>
-                    <td>MBA</td>
-                    <td>2 years</td>
-                    <td>$16,000</td>
-                </tr>
-                <tr></tr>
-                <tbody>
-                    </table>
-                    
-                    <table>
-                    <caption>Semester 1 Results</caption>
-                        <thead>
-                            <tr>
-                                <th scope="col">ID</th>
-                                <th scope="col">Name</th>
-                                <th scope="col">Marks</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>John Doe</td>
-                                <td>85</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Jane Smith</td>
-                                <td>90</td>
 
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>Michael Johnson</td>
-                                <td>78</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <form action="submit_form.php" method="post">
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" required><br><br>
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required><br><br>
-                        <input type="submit" value="Submit">
-                        <select name="course" id="course">
-                            <option value="btech">B.Tech</option>
-                            <option value="mtech">M.Tech</option>
-                            <option value="mba">MBA</option>
-                        </select>
-                        <button type="button" onclick="alert('Button clicked!')">Click Me</button>
-                        <textarea name="message" id="message" rows="4" cols="50" placeholder="Enter your message here..."></textarea>
-                        <input type="checkbox" id="subscribe" name="subscribe" value="yes">
-                        <label for="subscribe">Subscribe to newsletter</label>
-                        <input type="checkbox" id="Female" name="Female" value="Female">
-                        <label>Female</label>
-                        <button type="submit" disabled>submit</button>      
-                    </form>
-                </a>
+<body>
+  <header>
+    <div class="container header-content">
+      <a href="index.html" class="logo">🎓 Campus Events</a>
+
+      <nav aria-label="Main navigation">
+        <a href="index.html" class="active" aria-current="page">Home</a>
+        <a href="about.html">About</a>
+        <a href="events.html">Events</a>
+        <a href="event-details.html">Eventdetails</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="register.html">Register</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Discover. Participate. Grow.</h1>
+        <p>
+          Explore exciting technical, cultural, sports, and workshop
+          events happening on campus. Connect, learn, and make memories.
+        </p>
+        <a href="events.html" class="btn">Explore Events →</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <h2>Featured Events</h2>
+        <a href="events.html">View All Events →</a>
+      </div>
+
+      <div class="event-grid">
+        <article class="event-card">
+          <img
+            src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=700&q=80"
+            alt="Technology conference"
+          >
+          <div class="event-content">
+            <span class="badge">Technical</span>
+            <h3>Tech Fest 2026</h3>
+            <div class="event-meta">
+              📅 Oct 20, 2026<br>
+              📍 Main Auditorium
+            </div>
+            <p>
+              Experience innovation, competitions, and inspiring
+              technical talks.
+            </p>
+            <a href="event-details.html?event=tech" class="btn">
+              View Details →
+            </a>
+          </div>
+        </article>
+
+        <article class="event-card">
+          <img
+            src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=700&q=80"
+            alt="Live cultural performance"
+          >
+          <div class="event-content">
+            <span class="badge cultural">Cultural</span>
+            <h3>Cultural Day</h3>
+            <div class="event-meta">
+              📅 Oct 22, 2026<br>
+              📍 Open Air Theatre
+            </div>
+            <p>
+              Celebrate music, dance, art, and the diverse talents
+              of our campus.
+            </p>
+            <a href="event-details.html?event=cultural" class="btn">
+              View Details →
+            </a>
+          </div>
+        </article>
+
+        <article class="event-card">
+          <img
+            src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=700&q=80"
+            alt="Athletics event"
+          >
+          <div class="event-content">
+            <span class="badge sports">Sports</span>
+            <h3>Inter-College Sports Meet</h3>
+            <div class="event-meta">
+              📅 Oct 25, 2026<br>
+              📍 Sports Ground
+            </div>
+            <p>
+              Compete with passion and celebrate teamwork and
+              sportsmanship.
+            </p>
+            <a href="event-details.html?event=sports" class="btn">
+              View Details →
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Event Categories</h2>
+
+      <div class="category-grid">
+        <a href="events.html" class="category">
+          <span class="category-icon">💻</span>
+          <span>Technical<br>Events</span>
         </a>
-    </body>
-    </html>
+
+        <a href="events.html" class="category">
+          <span class="category-icon">🎵</span>
+          <span>Cultural<br>Events</span>
+        </a>
+
+        <a href="events.html" class="category">
+          <span class="category-icon">🏆</span>
+          <span>Sports<br>Events</span>
+        </a>
+
+        <a href="events.html" class="category">
+          <span class="category-icon">👥</span>
+          <span>Workshops<br>&amp; Seminars</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <div>
+        <h3>🎓 Campus Events</h3>
+        <p>
+          Bringing students together through exciting events
+          and unforgettable experiences.
+        </p>
+      </div>
+
+      <div>
+        <h3>Quick Links</h3>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="events.html">Events</a>
+        <a href="event-details.html">Eventdetails</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="register.html">Register</a>
+      </div>
+
+      <div>
+        <h3>Follow Us</h3>
+        <div class="social-icons" aria-label="Social media placeholders">
+          <span>f</span>
+          <span>◎</span>
+          <span>in</span>
+          <span>▶</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="copyright">
+      © 2026 Campus Events. All rights reserved.
+    </div>
+  </footer>
+</body>
+</html>
